@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+/* General Styling */
+
+@font-face {
+  font-family: SansationBold;
+  src: url("../public/Assets/SansationFonts/Sansation_Bold.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: SansationLight;
+  src: url("../public/Assets/SansationFonts/Sansation_Light.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: MontserratBold;
+  src: url("../public/Assets/MontserratFonts/Montserrat-Bold.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: MontserratLight;
+  src: url("../public/Assets/MontserratFonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: PlayPenSansMedium;
+  src: url("../public/Assets/PlayPenSansFonts/PlaypenSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: PlayPenSansExtraLight;
+  src: url("../public/Assets/PlayPenSansFonts/PlaypenSans-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.container {
+  margin: 40px 100px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Navigation Bar Styling */
+
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  background: linear-gradient(to left, #006bf9, #00c1fa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  /* font-family: SansationBold; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigations ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.navigation a {
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.navigation a:hover {
+  background: linear-gradient(to left, #006bf9, #00c1fa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+  border-bottom: 1px solid #006bf9;
+  padding-bottom: 2px;
 }
