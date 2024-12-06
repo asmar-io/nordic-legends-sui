@@ -51,7 +51,7 @@ a {
 
 @media (max-width: 768px) {
   .container {
-    margin: 20px 40px;
+    margin: 10px;
   }
 }
 
@@ -115,8 +115,7 @@ a {
   overflow-y: auto;
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.5s ease, 
-  opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .mobile-nav-logo-container {
@@ -180,6 +179,10 @@ a {
 
 /* Mobile Screen */
 @media (max-width: 768px) {
+  .mobile-nav {
+    margin: 15px;
+  }
+
   .logo {
     font-size: 18px;
   }
@@ -345,15 +348,21 @@ a {
 /* Mobile */
 @media (max-width: 768px) {
   .introduction-container {
-    margin: 20px 10px;
+    margin: 15px;
+    margin-top: 20px;
+  }
+
+  .introduction-text {
+    max-width: fit-content;
   }
 
   .introduction-text h1 {
-    font-size: 28px;
+    display: none;
   }
 
   .introduction-text p {
     font-size: 14px;
+    margin-bottom: 10px;
   }
 
   .button-group button {
@@ -367,7 +376,12 @@ a {
   }
 
   .introduction-img img {
-    width: 200px;
+    width: 100%;
+  }
+
+  .image-right1,
+  .image-right2 {
+    display: none;
   }
 }
 
@@ -507,11 +521,11 @@ a {
 @media (max-width: 768px) {
   .vision-container {
     flex-direction: column;
-    margin: 20px 40px;
+    margin: 100px 10px;
   }
 
   .vision-container-text p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .vision-container-text button {
@@ -611,11 +625,15 @@ a {
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .collections-container {
-    margin: 20px 40px;
+    margin: 10px;
   }
 
   .collections-text h1 {
     font-size: 40px;
+  }
+
+  .carousel {
+    margin-bottom: 50px;
   }
 
   .carousel img {
@@ -714,6 +732,10 @@ a {
     text-align: center;
   }
 
+  .collections-explian p:nth-of-type(2) {
+    text-align: justify;
+  }
+
   .warriors-container {
     flex-direction: column-reverse;
     margin: 50px 20px;
@@ -736,9 +758,19 @@ a {
 }
 
 @media (max-width: 768px) {
+  .warrior-details p,
+  .shieldmaiden-details p,
+  .collections-explian p:nth-of-type(2),
+  .warrior-collection-details p,
+  .shieldmaiden-collection-details p,
+  .warrior-collection-details ul li,
+  .shieldmaiden-collection-details ul li {
+    font-size: 14px;
+  }
+
   .warriors-img,
   .shield-maidens-img {
-    width: 70%;
+    width: 100%;
     height: auto;
   }
 }
@@ -804,8 +836,13 @@ a {
 }
 
 @media (max-width: 786px) {
+  .important-info-container {
+    margin: 0;
+  }
+
   .important-info {
-    padding: 40px 20px;
+    padding: 40px 10px;
+    font-size: 14px;
   }
 
   .important-info-heading {
@@ -927,6 +964,10 @@ a {
 }
 
 @media (max-width: 768px) {
+  .token-display-container {
+    margin: 40px 10px;
+  }
+
   .token-display-heading {
     font-size: 23px;
   }
@@ -938,6 +979,14 @@ a {
   .token-displays div {
     max-width: 100%;
     margin-bottom: 20px;
+  }
+
+  .token-displays div h2 {
+    font-size: 20px;
+  }
+
+  .token-displays div p {
+    font-size: 14px;
   }
 }
 
@@ -964,6 +1013,15 @@ a {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.community-info-texts h2 {
+  font-size: 25px;
+  font-family: PoppinsBold;
+}
+
+.community-info-texts p {
+  font-family: PoppinsLight;
 }
 
 /* Animation classes for text */
@@ -1001,13 +1059,19 @@ a {
     margin: 100px 40px;
   }
 
+  .community-info-texts {
+    width: 100%;
+    padding: 20px;
+  }
+
   .community-info-texts h2 {
     font-size: 25px;
   }
 
-  .community-info-texts {
-    width: 350px;
+  .community-info-texts p {
+    font-size: 14px;
   }
+
 
   .community-info-img {
     width: 350px;
@@ -1055,7 +1119,6 @@ a {
 @media (max-width: 1170px) {
   .footer-container {
     margin: 20px 40px;
-    /* width: 80%; */
   }
 
   .footer-texts {
@@ -1071,7 +1134,8 @@ a {
     padding: 0px;
     height: fit-content;
     flex-direction: column;
-    /* width: 100%; */
+    width: 100%;
+    margin: 0;
   }
 
   .footer-texts {
@@ -1085,6 +1149,7 @@ a {
     width: 100%;
     backdrop-filter: blur(4px);
     /* margin: 0px auto; */
+    padding: 40px;
   }
 
   .footer-img {
@@ -1094,5 +1159,9 @@ a {
   .footer-texts h1 {
     font-size: 20px;
     text-align: center;
+  }
+
+  .footer-texts p {
+    font-size: 14px;
   }
 }
