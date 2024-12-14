@@ -482,6 +482,7 @@ a {
   opacity: 0;
   transform: scale(0.9) translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
+  border-radius: 20px;
 }
 
 .fade-in .coming-soon-image {
@@ -589,9 +590,8 @@ a {
 
 .carousel-item.active img {
   height: 400px;
-  width: 300px;
   border-radius: 20px;
-  width: 350px;
+  width: 300px;
 }
 
 .carousel img {
@@ -797,9 +797,12 @@ a {
 .important-info {
   flex-basis: 47%;
   padding: 40px 50px;
-  background-color: #b8dbe6;
-  border-radius: 10px;
-  font-family: Comic;
+  /* background-color: #b8dbe6; */
+  background-image: url("./Assets/images/Important-infos-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border-radius: 20px; */
+  font-family: PoppinsBold;
   font-size: 28px;
   color: #000;
 }
@@ -811,7 +814,7 @@ a {
 .important-informations {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  /* width: 90%; */
   text-transform: capitalize;
 }
 
@@ -843,6 +846,7 @@ a {
   .important-info {
     padding: 40px 10px;
     font-size: 14px;
+    margin: 0 30px;
   }
 
   .important-info-heading {
@@ -900,6 +904,12 @@ a {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.staking-container,
+.raid-container,
+.nft-container {
+  padding-top: 30px;
 }
 
 .token-displays .staking-container {
@@ -1071,7 +1081,6 @@ a {
   .community-info-texts p {
     font-size: 14px;
   }
-
 
   .community-info-img {
     width: 350px;

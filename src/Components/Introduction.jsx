@@ -31,12 +31,7 @@ const Introduction = () => {
       <div className="introduction-text">
         <h1>NORDIC LEGENDS</h1>
         <p>
-          In the heart of the Viking world, where fierce Warriors rise and
-          mythic Shieldmaidens defend their clans, Nordic Legends begins its
-          journey. Our genesis collection features Warriors and Shieldmaidens
-          crafted for the first brave souls to join this legendary saga. These
-          NFTs are more than symbols; they are the foundation upon which you
-          will build your clan and conquer new territories.
+          Nordic Legends is a Viking-themed, community-driven ecosystem anchored by The Nordic Legends Genesis Collection, a limited set of 300 hand-crafted NFTs on the Sui network. These NFTs—featuring Warriors and Shieldmaidens—offer rarity-based rewards, staking opportunities, and future ecosystem perks.
         </p>
         <div className="button-group">
           <button className="raid-button">Raid</button>

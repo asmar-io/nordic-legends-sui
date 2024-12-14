@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import ComingSoonImg from '../Assets/images/Coming-soon-image.png';
+import NordicLegendsImg1 from '../Assets/images/GraphicLogo.jpg';
 
 const Vision = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -39,9 +39,9 @@ const Vision = () => {
                 <button>Raid</button>
             </div>
             <img
-                src={ComingSoonImg}
+                src={NordicLegendsImg1}
                 className='coming-soon-image'
-                alt="A pics saying 'Nordic Legends is coming to SUI soon'"
+                alt="A pics showing a warrior on the background and a text of 'Nordik Legends' on top of it."
             />
         </div>
     );

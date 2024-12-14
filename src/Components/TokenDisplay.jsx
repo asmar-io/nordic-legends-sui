@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
-import stakingImg from '../Assets/images/staking.png';
-import raidAndQuestImg from '../Assets/images/raidAndQuest.png';
-import nftIcon from '../Assets/images/nft icon.png';
+import stakingImg from '../Assets/images/stake-image.png'
+import raidAndQuestImg from '../Assets/images/raid-and-quest-image.png';
 
 const TokenDisplay = () => {
   const headingRef = useRef(null);
@@ -43,17 +42,17 @@ const TokenDisplay = () => {
       </h2>
       <div className='token-displays'>
         <div ref={stakingRef} className='staking-container'>
-          <img src={raidAndQuestImg} alt="" />
+          <img src={stakingImg} alt="" />
           <h2>Staking</h2>
           <p>Earn rewards by staking RAID tokens and your NFTs.</p>
         </div>
         <div ref={raidRef} className='raid-container'>
-          <img src={stakingImg} alt="" />
+          <img src={raidAndQuestImg} alt="" />
           <h2>Raids & Quests</h2>
           <p>RAID will power your future adventures, unlocking exclusive benefits.</p>
         </div>
         <div ref={nftRef} className='nft-container'>
-          <img src={nftIcon} alt="" />
+          <img src={stakingImg} alt="" />
           <h2>Burn Mechanism</h2>
           <p>As tokens are used in the ecosystem, their supply decreases, adding value to those who continue to raid and conquer.</p>
         </div>
