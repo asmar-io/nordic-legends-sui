@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Warrior1 from '../Assets/images/Sneak-Peaks/Warrior-Base.jpg';
-import Warrior2 from '../Assets/images/Sneak-Peaks/Common-Warrior-Base.jpg';
-// import Warrior3 from '../Assets/images/Sneak-Peaks/Common-Warrior-Base-2.jpg';
 import warrior4 from '../Assets/images/Sneak-Peaks/Screenshot_21-11-2024_22126_.jpeg'
 import warrior5 from '../Assets/images/Warrior_5.jpeg'
 import ShieldMaiden1 from '../Assets/images/Shield_Maiden_1.png';
 import ShieldMaiden2 from '../Assets/images/Sneak-Peaks/Shieldmaiden-2.png'
 import ShieldMaiden3 from '../Assets/images/Sneak-Peaks/Shieldmaiden-3.jpg'
-import ShieldMaiden4 from '../Assets/images/Sneak-Peaks/Shieldmaiden-4.png'
-import ShieldMaiden5 from '../Assets/images/Shieldmaiden-5.jpg'
 import OneEyedWarrior1 from '../Assets/images/One-eyed-warrior1.png'
 
 const Collections = () => {

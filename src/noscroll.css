@@ -1,0 +1,24 @@
+/* Roadmap Styling */
+.roadmap-container h1 {
+  background: linear-gradient(to right, #fff, #006bf9);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: PoppinsBold;
+}
+
+.roadmap-container-img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (max-width: 786px) {
+  .roadmap-container {
+    margin: 30px;
+  }
+
+  .roadmap-container h1 {
+    margin-bottom: 30px;
+  }
+}

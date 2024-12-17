@@ -1,4 +1,6 @@
 import { useInView } from 'react-intersection-observer';
+import NFTInfoImage from '../Assets/images/NFT Info.png'
+import MintingDetailsInfo from '../Assets/images/Minting Info.png'
 
 const ImportantInfo = () => {
   const { ref: headingRef, inView: headingInView } = useInView({
@@ -25,32 +27,8 @@ const ImportantInfo = () => {
         *Important Information*
       </h2>
       <div className="important-informations">
-        <div
-          ref={leftContainerRef}
-          className={`important-info important-info1 ${leftInView ? 'slide-in-left' : ''}`}
-        >
-          <p>For holding one (or more) of our NFTs you will be rewarded as follows:</p>
-          <ul>
-            <li>Airdrop of our $RAID token for each NFT you hold.</li>
-            <li>Eligible for future partnership airdrops</li>
-            <li>Exclusive giveaways and perks.</li>
-            <li>OG role.</li>
-            <li>Genesis collection will be linked to future gamification plans.</li>
-          </ul>
-        </div>
-        <div
-          ref={rightContainerRef}
-          className={`important-info important-info2 ${rightInView ? 'slide-in-right' : ''}`}
-        >
-          <p>The Mint will be as follows:</p>
-          <ul>
-            <li>300 Piece collection on Sui network</li>
-            <li>300 WL spots to mint.</li>
-            <li>Mint price 15 Sui.</li>
-            <li>Mint date TBA-December.</li>
-            <li>Mint platform Tradeport</li>
-          </ul>
-        </div>
+        <img src={NFTInfoImage} alt="" />
+        <img src={MintingDetailsInfo} alt="" />
       </div>
     </div>
   );
