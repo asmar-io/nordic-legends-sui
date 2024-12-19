@@ -28,7 +28,7 @@ const Collections = () => {
   }, [images.length]);
 
   return (
-    <div className="container collections-container">
+    <div className="container collections-container" id='collection'>
       <div
         style={{
           position: 'absolute',

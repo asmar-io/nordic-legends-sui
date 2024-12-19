@@ -26,7 +26,7 @@ const Navbar = () => {
                 return (
                   <>
                     <li className='navigation'>
-                      <Link className='navigation-link' key={navigation.id} to={navigation.url}>{navigation.name}</Link>
+                      <a className='navigation-link' key={navigation.id} href={navigation.url}>{navigation.name}</a>
                     </li>
                   </>
                 )
@@ -51,7 +51,7 @@ const Navbar = () => {
                 return (
                   <>
                     <li className='navigation mobile-nav-links'>
-                      <Link className='navigation-link' key={navigation.id} to={navigation.url}>{navigation.name}</Link>
+                      <a className='navigation-link' key={navigation.id} href={navigation.url}>{navigation.name}</a>
                     </li>
                   </>
                 )

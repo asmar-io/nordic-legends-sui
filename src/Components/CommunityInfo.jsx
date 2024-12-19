@@ -33,7 +33,7 @@ const CommunityInfo = () => {
   }, []);
 
   return (
-    <div className='container community-info-container'>
+    <div className='container community-info-container' id='community'>
       <img ref={img1Ref} src={NordicLegendsImg1} className='community-info-img' alt="Nordic Legends Text With A Pics in the Background" />
       <div ref={textRef} className='community-info-texts'>
         <h2>Community <br /> & <br /> Governance</h2>

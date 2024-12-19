@@ -41,8 +41,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 .container {
@@ -98,7 +104,7 @@ a {
   text-decoration: underline;
   border-bottom: 1px solid #006bf9;
   padding-bottom: 2px;
-  transition-duration: 3s;
+  transition-duration: 2s;
 }
 
 .mobile-nav {
@@ -236,7 +242,7 @@ a {
   gap: 20px;
 }
 
-.button-group button {
+.button-group a button {
   font-family: "PoppinsLight";
   font-size: 18px;
   padding: 10px 20px;
@@ -253,6 +259,10 @@ a {
   transform: scale(1.1);
   background: transparent;
   color: #006bf9;
+}
+
+.button-group button a:hover {
+  background: transparent;
 }
 
 /* Image Layout */
@@ -370,7 +380,7 @@ a {
     margin-bottom: 10px;
   }
 
-  .button-group button {
+  .button-group button a {
     font-size: 14px;
     padding: 8px 16px;
   }
@@ -920,7 +930,7 @@ a {
 
 .roadmap-container-img {
   margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
   opacity: 0; /* Initially hidden */
   transform: translateY(100px); /* Start 100px below */
   transition: all 1s ease-out; /* Smooth transition */
@@ -1323,6 +1333,7 @@ a {
   transition: all 0.3s ease-in-out;
   background: linear-gradient(to right, #00c1fa, #006bf9);
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .footer-texts a button:hover {

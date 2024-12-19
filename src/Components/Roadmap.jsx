@@ -26,7 +26,7 @@ const Roadmap = () => {
   }, []);
 
   return (
-    <div className='container roadmap-container'>
+    <div className='container roadmap-container' id='roadmap'>
       <h1>ROADMAP</h1>
       <img
         ref={imageRef}

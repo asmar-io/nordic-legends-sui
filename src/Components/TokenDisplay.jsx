@@ -36,7 +36,7 @@ const TokenDisplay = () => {
   }, []);
 
   return (
-    <div className='container token-display-container'>
+    <div className='container token-display-container' id='raid'>
       <h2 ref={headingRef} className='token-display-heading'>
         RaidToken ($RAID)
       </h2>

@@ -7,27 +7,32 @@ const Navigations = [
     {
         id: 2,
         name: "VISION",
-        url: "/",
+        url: "#vision",
+    },
+    {
+        id: 3,
+        name: "BROTHERS",
+        url: "#partners",
     },
     {
         id: 4,
-        name: "COLLECTIONS",
-        url: "/",
+        name: "COLLECTION",
+        url: "#collection",
     },
     {
         id: 5,
-        name: "RAID",
-        url: "/",
+        name: "ROADMAP",
+        url: "#roadmap",
     },
     {
         id: 6,
-        name: "COMMUNITY",
-        url: "/",
+        name: "RAID",
+        url: "#raid",
     },
     {
         id: 7,
-        name: "CONCLUSION",
-        url: "/",
+        name: "COMMUNITY",
+        url: "#community",
     },
 ];
 

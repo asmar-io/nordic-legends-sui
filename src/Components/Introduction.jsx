@@ -34,8 +34,8 @@ const Introduction = () => {
           Nordic Legends is a Viking-themed, community-driven ecosystem anchored by The Nordic Legends Genesis Collection, a limited set of 300 hand-crafted NFTs on the Sui network. These NFTs—featuring Warriors and Shieldmaidens—offer rarity-based rewards, staking opportunities, and future ecosystem perks.
         </p>
         <div className="button-group">
-          <button className="raid-button">Raid</button>
-          <button className="collections-button">Collections</button>
+          <a href="#raid"><button className="raid-button">Raid</button></a>
+          <a href="#collection"><button className="collections-button">Collections</button></a>
         </div>
       </div>
 

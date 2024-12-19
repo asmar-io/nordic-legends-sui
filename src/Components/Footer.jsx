@@ -33,7 +33,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className='footer-container'>
+    <div ref={footerRef} className='footer-container' id='conclusion'>
       <div className='footer-info-container'>
         <img
           ref={imgRef}

@@ -29,14 +29,15 @@ const Vision = () => {
     return (
         <div
             ref={sectionRef}
-            className={`container vision-container ${isVisible ? 'fade-in' : ''}`}
+            className={`container scroll-effect vision-container ${isVisible ? 'fade-in' : ''}`}
+            id='vision'
         >
             <div className='vision-container-text'>
                 <h2>OUR VISION</h2>
                 <p>
                     At Nordic Legends, we aim to forge a strong community of warriors, united by our passion for the North and our shared desire for glory. Together, we strengthen the Sui ecosystem, crafting a place where every raid, quest, and victory is a collective achievement. Our vision is to create a space where Vikings from all walks of life come together to grow, raid, and conquer as one mighty clan.
                 </p>
-                <button>Raid</button>
+                <a href="#raid"><button>Raid</button></a>
             </div>
             <img
                 src={NordicLegendsImg1}

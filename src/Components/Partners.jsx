@@ -63,7 +63,7 @@ const Partners = () => {
   };
 
   return (
-    <div ref={partnersRef} className="container partners-section-container">
+    <div ref={partnersRef} className="container partners-section-container" id="partners">
       <h1 className="partner-heading">Our Battle Brothers</h1>
       <div className={`partners-container ${isMobile ? "mobile" : "desktop"}`}>
         {isMobile ? (
