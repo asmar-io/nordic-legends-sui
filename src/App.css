@@ -90,6 +90,7 @@ a {
   justify-content: space-between;
   list-style-type: none;
   gap: 40px;
+  align-items: center;
 }
 
 .navigation a {
@@ -174,6 +175,24 @@ a {
   opacity: 1;
 }
 
+.sui-sdk-btn {
+  background-color: #006bf9;
+}
+
+.connect-wallet-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.connect-wallet-btn p {
+  font-size: 20px;
+  color: #fff;
+}
+
 /* Animation: Slide-out for closed state */
 .mobile-nav-container.closed {
   transform: translateX(-100%);
@@ -189,6 +208,20 @@ a {
   .desktop-nav {
     display: none;
   }
+
+  .connect-wallet-btn {
+    font-size: 15px;
+    margin-right: 30px;
+  }
+
+  .connect-wallet-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .connect-wallet-btn p {
+    font-size: 15px;
+  }
 }
 
 /* Mobile Screen */
@@ -198,11 +231,24 @@ a {
   }
 
   .logo {
-    font-size: 18px;
+    font-size: 10px;
   }
 
   .cancel-nav-btn {
     font-size: 25px;
+  }
+
+  .connect-wallet-btn {
+    font-size: 10px;
+  }
+
+  .connect-wallet-btn img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .connect-wallet-btn p {
+    font-size: 10px;
   }
 }
 
@@ -1279,22 +1325,19 @@ a {
 
 .footer-info-container {
   background: linear-gradient(
-  to bottom,
-  rgba(0, 193, 250, 0.7),
-  rgba(61, 152, 180, 0.7),
-  /* rgba(65, 106, 119, 0.7), */
-  rgba(144, 185, 197, 0.7),
-  rgba(0, 193, 250, 0.7),
-  /* rgba(253, 253, 253, 0.5), */
-  /* rgba(0, 106, 248, 0.7), */
-  rgba(255, 255, 255, 0.9)
+    to bottom,
+    rgba(0, 193, 250, 0.7),
+    rgba(61, 152, 180, 0.7),
+    /* rgba(65, 106, 119, 0.7), */ rgba(144, 185, 197, 0.7),
+    rgba(0, 193, 250, 0.7),
+    /* rgba(253, 253, 253, 0.5), */ /* rgba(0, 106, 248, 0.7), */
+      rgba(255, 255, 255, 0.9)
   );
   width: 100%;
   padding: 50px 100px;
   display: flex;
   gap: 100px;
   align-items: center;
-  
 }
 
 /* Image animation */

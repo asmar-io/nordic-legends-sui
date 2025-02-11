@@ -3,6 +3,10 @@ import { Navigations } from './utils';
 import HamburgerBtn from '../Assets/images/Hamburger-btn.png'
 import { useState } from 'react';
 import { MdCancel } from "react-icons/md";
+import '@mysten/dapp-kit/dist/index.css';
+import { SiSui } from "react-icons/si";
+import { ConnectButton } from '@mysten/dapp-kit';
+import SuiLogo from '../Assets/images/SuiLogo.png'
 
 const Navbar = () => {
 
@@ -31,20 +35,43 @@ const Navbar = () => {
                   </>
                 )
               })}
+              <ConnectButton style={{
+                background: 'linear-gradient(to left, #006bf9, #00c1fa)'
+              }}
+                connectText={
+                  <div className='connect-wallet-btn'>
+                    <img src={SuiLogo} alt="" /> <p>Connect Wallet</p>
+                  </div>
+                }
+              />
             </ul>
           </div>
+
         </>
       }
       <div className='mobile-nav'>
-        {!hamburgerState && <img src={HamburgerBtn} className='hamburger' onClick={handleHamburgerState} alt="Hamburger Menu" />}
-        {
-          hamburgerState &&
+        {!hamburgerState &&
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <ConnectButton style={{
+              background: 'linear-gradient(to left, #006bf9, #00c1fa)',
+              marginRight: '10px'
+            }}
+              connectText={
+                <div className='connect-wallet-btn'>
+                  <img src={SuiLogo} alt="" /> <p>Connect Wallet</p>
+                </div>
+              }
+            />
+            <img src={HamburgerBtn} className='hamburger' onClick={handleHamburgerState} alt="Hamburger Menu" />
+          </div>
+        }
+        {hamburgerState &&
           <div className={`mobile-nav-container ${hamburgerState ? 'open' : 'closed'}`}>
             <div className='mobile-nav-logo-container'>
               <div className='logo'>
                 <h2>NORDIC LEGENDS</h2>
               </div>
-              <MdCancel className='cancel-nav-btn' onClick={() => setHamburgerState(!hamburgerState)}/>
+              <MdCancel className='cancel-nav-btn' onClick={() => setHamburgerState(!hamburgerState)} />
             </div>
             <ul>
               {Navigations.map((navigation) => {
