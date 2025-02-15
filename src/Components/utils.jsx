@@ -24,6 +24,11 @@ const MintNavigations = [
     },
     {
         id: 2,
+        name: "COLLECTIONS",
+        url: "/connectwallet",
+    },
+    {
+        id: 3,
         name: "MINT",
         url: "/mint",
     },

@@ -4,7 +4,7 @@ import { ConnectButton } from "@mysten/dapp-kit";
 import SuiLogo from "../Assets/images/SuiLogo.png";
 import HamburgerBtn from '../Assets/images/Hamburger-btn.png';
 import { MdCancel } from "react-icons/md";
-import { Navigations } from './utils';
+import { MintNavigations, Navigations } from './utils';
 
 
 const MintNavBar = () => {
@@ -28,7 +28,7 @@ const MintNavBar = () => {
                         <h2>NORDIC LEGENDS</h2>
                     </div>
                     <div className="desktop-mint-nav">
-                        {Navigations.map((navigation) => {
+                        {MintNavigations.map((navigation) => {
                             return (
                                 <li className='mint-navigation' key={navigation.id}>
                                     <a className='navigation-link' href={navigation.url}>{navigation.name}</a>

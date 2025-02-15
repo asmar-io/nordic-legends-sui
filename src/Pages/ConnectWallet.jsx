@@ -7,30 +7,31 @@ import NightlyLogo from '../Assets/images/Nightly-logo.png';
 import MetamaskLogo from '../Assets/images/Metamask-Logo.png';
 import MartianLogo from '../Assets/images/Martian-Logo.png';
 import SurfWalletLogo from '../Assets/images/Surf-wallet-logo.png';
+import MintNavBar from '../Components/MintNavBar';
 
 const ConnectWallet = () => {
-    const walletOptions = [
-        {
-            name: 'Sui Wallet',
-            logo: SuiColoredLogo
-        },
-        {
-            name: 'Suiet',
-            logo: SuietLogo
-        },
-        {
-            name: 'Stashed',
-            logo: NightlyLogo
-        },
-        {
-            name: 'Surf Wallet',
-            logo: SurfWalletLogo
-        },
-    ]
+    // const walletOptions = [
+    //     {
+    //         name: 'Sui Wallet',
+    //         logo: SuiColoredLogo
+    //     },
+    //     {
+    //         name: 'Suiet',
+    //         logo: SuietLogo
+    //     },
+    //     {
+    //         name: 'Stashed',
+    //         logo: NightlyLogo
+    //     },
+    //     {
+    //         name: 'Surf Wallet',
+    //         logo: SurfWalletLogo
+    //     },
+    // ]
 
     return (
         <div className='wallet-connect-page'>
-            <Navbar />
+            <MintNavBar />
             <div className='wallet-connect-container'>
                 <img className='wallet-connect-featured-img' src={WalletConnectFeaturedImg} alt="A Legendary NFT" />
                 <div className='wallet-options'>

@@ -10,11 +10,12 @@ import CommunityInfo from '../Components/CommunityInfo';
 import Footer from '../Components/Footer';
 import Partners from '../Components/Partners';
 import Roadmap from '../Components/Roadmap';
+import MintNavBar from '../Components/MintNavBar';
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <MintNavBar />
       <Introduction />
       <Vision />
       <Partners />
