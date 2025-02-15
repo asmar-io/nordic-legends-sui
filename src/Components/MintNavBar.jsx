@@ -65,7 +65,7 @@ const MintNavBar = () => {
                             <MdCancel className='cancel-nav-btn' onClick={() => setHamburgerState(!hamburgerState)} />
                         </div>
                         <ul>
-                            {Navigations.map((navigation) => {
+                            {MintNavigations.map((navigation) => {
                                 return (
                                     <li className='navigation mobile-nav-links' key={navigation.id}>
                                         <a className='navigation-link' href={navigation.url}>{navigation.name}</a>
