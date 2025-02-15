@@ -14,17 +14,17 @@ import Roadmap from '../Components/Roadmap';
 const Home = () => {
   return (
     <div>
-        <Navbar />
-        <Introduction />
-        <Vision />
-        <Partners />
-        <Collections />
-        <CollectionsInfo />
-        <Roadmap />
-        <ImportantInfo />
-        <TokenDisplay />
-        <CommunityInfo />
-        <Footer />
+      <Navbar />
+      <Introduction />
+      <Vision />
+      <Partners />
+      <Collections />
+      <CollectionsInfo />
+      <Roadmap />
+      <ImportantInfo />
+      <TokenDisplay />
+      <CommunityInfo />
+      <Footer />
     </div>
   )
 }

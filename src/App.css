@@ -1952,7 +1952,7 @@ a {
   text-decoration: none;
 }
 
-@keyframes fadeIn {
+@keyframes bannerFadeIn {
   from {
     opacity: 0;
     transform: translate(-50%, -40%);
@@ -1964,7 +1964,7 @@ a {
 }
 
 .mint-success-banner {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: bannerFadeIn 0.3s ease-out forwards;
 }
 
 /* Responsive adjustments */
