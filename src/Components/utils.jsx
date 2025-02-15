@@ -7,7 +7,7 @@ const Navigations = [
     {
         id: 4,
         name: "COLLECTIONS",
-        url: "#collection",
+        url: "/connectwallet",
     },
     {
         id: 6,
@@ -16,4 +16,17 @@ const Navigations = [
     },
 ];
 
-export { Navigations };
+const MintNavigations = [
+    {
+        id: 1,
+        name: "HOME",
+        url: "/",
+    },
+    {
+        id: 2,
+        name: "MINT",
+        url: "/mint",
+    },
+];
+
+export { Navigations, MintNavigations };

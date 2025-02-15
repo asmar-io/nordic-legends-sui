@@ -93,7 +93,12 @@ a {
   align-items: center;
 }
 
-.navigation a {
+.desktop-mint-nav {
+  display: flex;
+}
+
+.navigation a,
+.mint-navigation a {
   font-size: 15px;
   letter-spacing: 3px;
   font-weight: 600;
@@ -101,7 +106,9 @@ a {
 }
 
 .navigation a:hover,
-.navigation a:focus {
+.navigation a:focus,
+.mint-navigation a:hover,
+.mint-navigation a:focus {
   background: linear-gradient(to left, #006bf9, #00c1fa);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -205,7 +212,9 @@ a {
     display: block;
   }
 
-  .desktop-nav {
+  .desktop-nav,
+  .mint-connect-wallet-btn,
+  .desktop-mint-nav {
     display: none;
   }
 
@@ -1445,4 +1454,525 @@ a {
     font-size: 25px;
   }
 }
-/* raidtoken margin on tablet */
+
+/* Connect Button Styling */
+.connect-btn {
+  background: linear-gradient(to right, #00c1fa, #006bf9);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.connected-wallet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.disconnect-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Wallet Connect Page Styling */
+.wallet-connect-container {
+  background-color: #fff;
+  display: flex;
+  align-items: stretch;
+  padding: 100px;
+}
+
+.wallet-connect-featured-img {
+  width: 50%;
+  height: auto;
+  /* object-fit: contain; */
+}
+
+.wallet-options {
+  background-color: rgba(148, 197, 212, 0.7);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.wallet-options h1 {
+  font-size: 46px;
+  font-family: PoppinsBold;
+}
+
+.wallet-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: #fff;
+  padding: 30px 20px;
+  justify-self: center;
+  border-radius: 15px;
+  width: 80%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wallet-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wallet-option:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.wallet-option p {
+  font-size: 16px;
+  font-family: PoppinsLight;
+}
+
+.wallet-option-img {
+  width: 30px;
+  height: 30px;
+}
+
+/* wallet connect page responsive */
+@media (max-width: 1180px) {
+  .wallet-connect-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wallet-connect-featured-img {
+    width: 100%;
+  }
+
+  .wallet-options {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .wallet-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px 20px;
+    justify-self: center;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .wallet-connect-container {
+    background-color: #000;
+  }
+
+  .wallet-connect-container {
+    padding: 15px;
+  }
+
+  .wallet-options {
+    padding: 30px 10px;
+  }
+
+  .wallet-options h1 {
+    font-size: 30px;
+    font-family: PoppinsBold;
+  }
+}
+
+@media (max-width: 450px) {
+  .wallet-options h1 {
+    font-size: 25px;
+  }
+
+  .wallet-option {
+    width: 100px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .wallet-option-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .wallet-option p {
+    font-size: 14px;
+  }
+}
+
+/* mint page styling */
+.mint-page-container {
+  background-color: #fff;
+  color: #fff;
+  padding: 100px;
+}
+
+.mint-page-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: #000;
+}
+
+.mint-page-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.mint-page-content-right-container-top {
+  background: linear-gradient(135deg, #01131f, #002448);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.minting-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.countdown {
+  font-size: 24px;
+  display: flex;
+  gap: 10px;
+  font-family: PoppinsBold;
+  color: #05cd99;
+}
+
+.countdown-finish span {
+  font-size: 16px;
+  background-color: #05cd991c;
+  border-radius: 50px;
+  padding: 5px 15px;
+  display: flex;
+  gap: 10px;
+  color: #05cd99;
+}
+
+.countdown span {
+  border: 1px solid #05cd99;
+  width: 60px;
+  text-align: center;
+}
+
+.minting-status p {
+  font-family: PoppinsBold;
+  font-size: 24px;
+  color: #05cd99;
+}
+
+.raid-instruction {
+  font-family: PoppinsLight;
+  font-size: 18px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.nft-name {
+  font-size: 36px;
+  font-family: PoppinsBold;
+}
+
+.minting-instruction {
+  font-family: PoppinsLight;
+  font-size: 18px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* .mint-page-content-right-container-bottom {
+  background: linear-gradient(to right, #00c1fa, #006bf9);
+} */
+
+.minting-progress {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #05cd99;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: white;
+}
+
+.progress-stats p {
+  margin: 0;
+}
+
+.mint-page-content-right-container-bottom {
+  background: linear-gradient(135deg, #01131f, #002448);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-et-eligibility {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-et-eligibility div p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.price-et-eligibility div h1 {
+  font-size: 36px;
+  font-family: PoppinsBold;
+}
+
+.eligible {
+  align-self: flex-start;
+  font-size: 16px;
+  background-color: #05cd991c;
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: #05cd99;
+}
+
+.not-eligible {
+  align-self: flex-start;
+  font-size: 16px;
+  background-color: #ff00001c;
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: #ff0000;
+}
+
+.minting-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.progress-stats p,
+.mint-now-button p {
+  font-family: PoppinsLight;
+}
+
+.mint-now-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mint-now-button button {
+  color: #fff;
+  font-family: PoppinsBold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(to left, #006bf9, #00c1fa);
+  cursor: pointer;
+}
+
+/* mint page responsive */
+@media (max-width: 1180px) {
+  .mint-page-container {
+    padding: 30px;
+  }
+
+  .mint-page-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mint-page-content-right {
+    width: 100%;
+  }
+
+  .mint-page-content img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mint-page-container {
+    background-color: #000;
+    padding: 15px;
+  }
+
+  .mint-page-content {
+    padding: 20px;
+  }
+
+  .nft-name {
+    font-size: 30px;
+  }
+
+  .minting-status {
+    flex-direction: column;
+  }
+
+  .minting-status p,
+  .countdown {
+    font-size: 18px;
+  }
+
+  .raid-instruction,
+  .minting-instruction {
+    font-size: 16px;
+  }
+
+  .price-et-eligibility div h1 {
+    font-size: 30px;
+  }
+
+  .price-et-eligibility div p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .mint-page-content {
+    padding: 15px;
+  }
+
+  .nft-name {
+    font-size: 25px;
+  }
+
+  .minting-status p,
+  .countdown {
+    font-size: 18px;
+  }
+
+  .countdown span {
+    width: 45px;
+    font-size: 16px;
+  }
+
+  .raid-instruction,
+  .minting-instruction {
+    font-size: 14px;
+  }
+
+  .price-et-eligibility div h1 {
+    font-size: 25px;
+  }
+
+  .price-et-eligibility div p {
+    font-size: 12px;
+  }
+
+  .mint-now-button button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Mint Success Banner Stylings */
+.mint-success-banner {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 107, 249, 0.3);
+  border: 1px solid rgba(0, 193, 250, 0.3);
+}
+
+.mint-success-banner-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: PoppinsBold;
+}
+
+.mint-success-banner-content-top h1 {
+  font-size: 24px;
+}
+
+.mint-success-banner-content-top svg {
+  font-size: 25px;
+}
+
+.mint-success-banner-content-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mint-success-banner-content-bottom p {
+  font-family: PoppinsLight;
+}
+
+.mint-success-banner-content-bottom a {
+  color: #00c1fa;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mint-success-banner {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mint-success-banner {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    min-height: 250px;
+  }
+}
