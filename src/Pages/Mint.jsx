@@ -35,10 +35,10 @@ const Mint = () => {
         const updateCountdown = () => {
             const now = new Date();
             // Minting Date Countdown
-            // const difference = targetDate - now;
+            const difference = targetDate - now;
 
             // Minting D-Day Test
-            const difference = 0
+            // const difference = 0
 
             if (difference > 0) {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -94,9 +94,9 @@ const Mint = () => {
                                     </div>
                                 ) : (
                                     <div className='countdown'>
-                                        <span>{timeLeft.days}d </span>
-                                        <span>{timeLeft.hours}h </span>
-                                        <span>{timeLeft.minutes}m </span>
+                                        <span>{timeLeft.days}d</span>
+                                        <span>{timeLeft.hours}h</span>
+                                        <span>{timeLeft.minutes}m</span>
                                         <span>{timeLeft.seconds}s</span>
                                     </div>
                                 )}
