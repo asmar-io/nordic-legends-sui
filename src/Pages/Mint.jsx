@@ -18,8 +18,9 @@ const Mint = () => {
     });
     const [isMinting, setIsMinting] = useState(false);
     const [mintedCount, setMintedCount] = useState(100);
-    const [eligibility, setEligibility] = useState(true);
+    const [eligibility, setEligibility] = useState(false);
     const [mintPrice, setMintPrice] = useState(15);
+    const [hasMintedBefore, setHasMintedBefore] = useState(false);
 
     useEffect(() => {
         if (walletBalance) {
@@ -30,7 +31,7 @@ const Mint = () => {
     }, [walletBalance]);
 
     useEffect(() => {
-        const targetDate = new Date('2025-02-22T08:00:00');
+        const targetDate = new Date('2025-02-22T08:00:00Z');
 
         const updateCountdown = () => {
             const now = new Date();
@@ -64,7 +65,6 @@ const Mint = () => {
         setMintSuccessBanner(true);
     }
 
-
     useEffect(() => {
         if (mintSuccessBanner) {
             setTimeout(() => {
@@ -72,6 +72,18 @@ const Mint = () => {
             }, 10000);
         }
     }, [mintSuccessBanner]);
+
+    useEffect(() => {
+        // This is where you would add your logic to check if the wallet has minted before
+        // For example, querying the blockchain or your backend
+        const checkPreviousMints = async () => {
+            // Replace this with actual implementation
+            // const hasMinted = await checkWalletMintHistory();
+            // setHasMintedBefore(hasMinted);
+        };
+
+        checkPreviousMints();
+    }, [/* add dependencies as needed */]);
 
     return (
         <div>
@@ -135,9 +147,9 @@ const Mint = () => {
                                 </div>
                                 <div className='mint-now-button'>
                                     <p><TiWarning /> One Per Wallet</p>
-                                    {/* Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false */}
+                                    {/* Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
                                     <button
-                                        disabled={!eligibility || mintedCount >= 300 || !isMinting}
+                                        disabled={!eligibility || mintedCount >= 300 || !isMinting || formattedBalance < 15 || hasMintedBefore}
                                         onClick={handleMint}
                                     >
                                         Mint Now
