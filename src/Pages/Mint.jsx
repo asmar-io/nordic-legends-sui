@@ -127,7 +127,7 @@ const Mint = () => {
                             </div>
                             <p className='raid-instruction'>Let's RAID against the tridal wave</p>
                             <h1 className='nft-name'>Nordic Legends</h1>
-                            <p className='minting-instruction'>Bestowed by Odin, the Allfather, this WL NFT grants the right to claim your Warrior or Shieldmaiden in the Nordic Legends main collection mint.</p>
+                            <p className='minting-instruction'>Warriors & Shieldmaidens – The fearless core of the Nordic Legends. From common and rare to the ultra-rare Legendary Warriors and Mythic Shieldmaidens, these battle-hardened Vikings stand ready for glory. Mint your LEGEND and join the fight!</p>
                         </div>
                         <div className='mint-page-content-right-container-bottom'>
                             <div className='price-et-eligibility'>
