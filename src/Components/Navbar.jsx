@@ -49,7 +49,7 @@ const Navbar = () => {
               {Navigations.map((navigation) => {
                 return (
                   <li className='navigation' key={navigation.id}>
-                    <a className='navigation-link' href={navigation.url}>{navigation.name}</a>
+                    <a className='navigation-link' href={'/'}>{navigation.name}</a>
                   </li>
                 )
               })}
@@ -88,7 +88,7 @@ const Navbar = () => {
               {Navigations.map((navigation) => {
                 return (
                   <li className='navigation mobile-nav-links' key={navigation.id}>
-                    <a className='navigation-link' href={navigation.url}>{navigation.name}</a>
+                    <a className='navigation-link' href={'/'}>{navigation.name}</a>
                   </li>
                 )
               })}

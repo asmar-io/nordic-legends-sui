@@ -8,7 +8,7 @@ import MintSuccessBanner from '../Components/MintSuccessBanner';
 
 
 const Mint = () => {
-    const { walletBalance, mintSuccessBanner, setMintSuccessBanner } = useContext(Context);
+    const { walletBalance, mintSuccessBanner, setMintSuccessBanner, walletAddress } = useContext(Context);
     const [formattedBalance, setFormattedBalance] = useState('0');
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
@@ -20,7 +20,9 @@ const Mint = () => {
     const [mintedCount, setMintedCount] = useState(100);
     const [eligibility, setEligibility] = useState(false);
     const [mintPrice, setMintPrice] = useState(15);
-    const [hasMintedBefore, setHasMintedBefore] = useState(false);
+    const authorizedAddresses = [
+        "0xc834672823e3deef5997225e511752f893e237787cb9623888c0528b5077658c",
+    ];
 
     useEffect(() => {
         if (walletBalance) {
@@ -31,7 +33,7 @@ const Mint = () => {
     }, [walletBalance]);
 
     useEffect(() => {
-        const targetDate = new Date('2025-02-22T08:00:00Z');
+        const targetDate = new Date('2025-02-21T16:00:00Z');
 
         const updateCountdown = () => {
             const now = new Date();
@@ -60,10 +62,32 @@ const Mint = () => {
         return () => clearInterval(timer);
     }, []);
 
+    useEffect(() => {
+        const checkAuthorization = () => {
+            // Check if current date is before launch date
+            const launchDate = new Date('2025-02-22T08:00:00Z');
+            const now = new Date();
+
+            if (now < launchDate) {
+                // If before launch date, check if user is authorized
+                const userAddress = walletAddress;
+                const isAuthorized = authorizedAddresses.includes(userAddress);
+
+                if (!isAuthorized) {
+                    // Redirect unauthorized users
+                    window.location.href = '/';
+                }
+            }
+        };
+
+        checkAuthorization();
+    }, []);
+
     const handleMint = () => {
         console.log('Minting😛...');
         setMintSuccessBanner(true);
     }
+
 
     useEffect(() => {
         if (mintSuccessBanner) {
@@ -72,18 +96,6 @@ const Mint = () => {
             }, 10000);
         }
     }, [mintSuccessBanner]);
-
-    useEffect(() => {
-        // This is where you would add your logic to check if the wallet has minted before
-        // For example, querying the blockchain or your backend
-        const checkPreviousMints = async () => {
-            // Replace this with actual implementation
-            // const hasMinted = await checkWalletMintHistory();
-            // setHasMintedBefore(hasMinted);
-        };
-
-        checkPreviousMints();
-    }, [/* add dependencies as needed */]);
 
     return (
         <div>
@@ -149,7 +161,7 @@ const Mint = () => {
                                     <p><TiWarning /> One Per Wallet</p>
                                     {/* Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
                                     <button
-                                        disabled={!eligibility || mintedCount >= 300 || !isMinting || formattedBalance < 15 || hasMintedBefore}
+                                        disabled={!eligibility || mintedCount >= 300 || !isMinting || formattedBalance < 15}
                                         onClick={handleMint}
                                     >
                                         Mint Now

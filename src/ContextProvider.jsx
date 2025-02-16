@@ -21,6 +21,16 @@ export const ContextProvider = ({ children }) => {
         }
     };
 
+    const getWalletAddress = async () => {
+        try {
+            const walletAddress = await SuiClient.getWalletAddress();
+            setWalletAddress(walletAddress);
+        } catch (error) {
+            console.error("Failed to fetch wallet address:", error);
+        }
+    };
+
+
     const handleMintSuccessBanner = () => {
         setMintSuccessBanner(true);
     }
