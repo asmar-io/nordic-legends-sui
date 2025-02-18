@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import { WalletProvider } from "@mysten/dapp-kit";
+// import { WalletProvider } from "@mysten/dapp-kit";
 import { getFullnodeUrl } from "@mysten/sui.js/client";
-import { SuiClientProvider } from "@mysten/dapp-kit";
+import { SuiClientProvider, WalletProvider } from "@mysten/dapp-kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ConnectWallet from "./Pages/ConnectWallet";
 import { ContextProvider } from "./ContextProvider";
@@ -18,10 +18,10 @@ const networks = {
 
 const App = () => {
   return (
-    <ContextProvider>
-      <QueryClientProvider client={queryClient}>
-        <SuiClientProvider networks={networks} defaultNetwork="devnet">
-          <WalletProvider autoConnect={true}>
+    <QueryClientProvider client={queryClient}>
+      <SuiClientProvider networks={networks} defaultNetwork="devnet">
+        <WalletProvider autoConnect={true}>
+          <ContextProvider>
             <BrowserRouter>
               <Routes>
                 <Route exact path="/" element={<Home />} />
@@ -29,10 +29,10 @@ const App = () => {
                 <Route path="/mint" element={<Mint />} />
               </Routes>
             </BrowserRouter>
-          </WalletProvider>
-        </SuiClientProvider>
-      </QueryClientProvider>
-    </ContextProvider>
+          </ContextProvider>
+        </WalletProvider>
+      </SuiClientProvider>
+    </QueryClientProvider>
   );
 };
 
