@@ -35,12 +35,13 @@ const Mint = () => {
         "0x96ac5da4718848fc0fcd8c2d3ee29c462433cc45fb890cbc077411c665e67b92".toLowerCase(),
     ];
 
-    const suiClient = new SuiClient({ url: getFullnodeUrl('testnet') });
-    const kioskClient = new KioskClient({client: suiClient,network:  Network.TESTNET});
+    const suiClient = new SuiClient({ url: getFullnodeUrl('mainnet') });
+    const kioskClient = new KioskClient({client: suiClient,network:  Network.MAINNET});
 	const { mutateAsync: signTransaction } = useSignTransaction();
     const [wlnfts, setWlNfts] = useState([]);
     const PACKAGE = '0xd6ab30b271c66daee6fb38bb49e25d94e98ecfb525e163ec322ed60341e0b272';
-    const WL_TYPE = '0xf8783aaad0185dd36c74992a1026d17780533f57a3fcbd2e382cac8697a033c0::nordicLegends::Wl';
+    const WL_TYPE = '0xcdbec1c422f0a56afc0515e4458f6e994d2fa9a660513e03014e90eb7af2165a::nordic_legends::Nft';
+    //const WL_TYPE = '0xf8783aaad0185dd36c74992a1026d17780533f57a3fcbd2e382cac8697a033c0::nordicLegends::Wl';
     const MINT_CONFIG = '0x558af79ea6776df2e74ab7b88c1bec286dd81f604c8caa879fd723bb267a9c0c';
     const MINT_PRICE = 0.1;
 
@@ -308,9 +309,9 @@ const Mint = () => {
                                         </div>
                                         <div className='mint-now-button'>
                                             <p><TiWarning /> One Per Wallet</p>
-                                            {/* disabled={!isEligible || mintedCount >= 300 || !isMinting || formattedBalance < 15} Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
+                                            {/*  Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
                                             <button
-                                            
+                                              disabled={!isEligible || mintedCount >= 300 || !isMinting || formattedBalance < 15}
                                                 onClick={handleMint}
                                             >
                                                 Mint Now
