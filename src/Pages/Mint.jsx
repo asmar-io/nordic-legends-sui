@@ -96,8 +96,9 @@ const Mint = () => {
 
                 setIsLoading(false);
             };
-
-            checkEligibility();
+            setIsEligible(true);
+            setIsLoading(false);
+            //checkEligibility();
         } else {
             setHasWalletAddress(false);
             setIsEligible(false); // Reset eligibility when walletAddress is null
@@ -245,13 +246,14 @@ const Mint = () => {
             {mintSuccessBanner && <MintSuccessBanner />}
             {
                 !hasWalletAddress ? (
-                    <h1 style={{ color: '#fff', textAlign: 'center' }}>Connecting to Wallet...</h1>
+                    <h1 style={{ color: '#fff', textAlign: 'center' }}>Connect Your Wallet</h1> 
                 ) : isLoading ? (
                     <h1 style={{ color: '#fff', textAlign: 'center' }}>Checking Eligibility...</h1>
                 ) : !isEligible ? (
                     <h1 style={{ color: '#fff', textAlign: 'center' }}>You are not authorized. Please connect and authorize your wallet.</h1>
                 ) : (
                     <div className='mint-page-container'>
+                       
                         <div className='mint-page-content'>
                             <div className='mint-page-content-left'>
                                 <img src={MintFeaturedImg} alt="A Legendary Warrior" />
