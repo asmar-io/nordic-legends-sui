@@ -137,7 +137,8 @@ const Mint = () => {
         if(wlnfts.length < 1 ) return;
         console.log('Minting in progress...');
         const tx = new Transaction();
-        /*const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
+        /*
+        const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
         tx.moveCall({
             target: PACKAGE + '::nordicLegends::public_mint',
             //typeArguments: [ WL_TYPE],
@@ -146,7 +147,8 @@ const Mint = () => {
               //tx.object(item),
               coin
             ],
-        });*/
+        });
+        */
         wlnfts.map(async (nft) => { 
             const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
             const kioskTx = new KioskTransaction({
