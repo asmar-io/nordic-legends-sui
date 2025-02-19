@@ -195,7 +195,6 @@ const Mint = () => {
 
     const load = async () => {
         let address = account?.address;
-        //let address = "0x9194f5e12f46e7b8827ae941c05115c896ce881c3854be1c91cc23c08fe8515d";
         try {
             const { kioskOwnerCaps, kioskIds } = await kioskClient.getOwnedKiosks({
               address: address,
