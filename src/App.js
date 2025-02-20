@@ -20,8 +20,8 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networks} defaultNetwork="mainnet">
-        <WalletProvider autoConnect={true}>
-          <ContextProvider>
+      <WalletProvider autoConnect={true} stashedWallet={{name: 'Nordic Legends'}}>
+        <ContextProvider>
             <BrowserRouter>
               <Routes>
                 <Route exact path="/" element={<Home />} />
