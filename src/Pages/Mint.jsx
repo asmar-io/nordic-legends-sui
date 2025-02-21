@@ -39,11 +39,12 @@ const Mint = () => {
     const kioskClient = new KioskClient({client: suiClient,network:  Network.MAINNET});
 	const { mutateAsync: signTransaction } = useSignTransaction();
     const [wlnfts, setWlNfts] = useState([]);
-    const PACKAGE = '0xd6ab30b271c66daee6fb38bb49e25d94e98ecfb525e163ec322ed60341e0b272';
+    const PACKAGE = '0x1a250c90033b19a27a60c04193e4b04a88d3141166e0f8dc286e7b79a40b72ed';
     const WL_TYPE = '0xcdbec1c422f0a56afc0515e4458f6e994d2fa9a660513e03014e90eb7af2165a::nordic_legends::Nft';
     //const WL_TYPE = '0xf8783aaad0185dd36c74992a1026d17780533f57a3fcbd2e382cac8697a033c0::nordicLegends::Wl';
-    const MINT_CONFIG = '0x558af79ea6776df2e74ab7b88c1bec286dd81f604c8caa879fd723bb267a9c0c';
-    const MINT_PRICE = 0.1;
+    const MINT_CONFIG = '0x2b36a6e512d3af7d3ddbff74e54201e6d7e403a4f7cb81b0ad771a45524cec54';
+    const TRANSFER_POLICY = '0xf1a5bf7ec5b1597c1df3b4868105a678179fb5dc3d9d4ed8c24ca2da2225aff3';
+    const MINT_PRICE = 15;
 
     useEffect(() => {
         if (walletBalance) {
@@ -148,7 +149,8 @@ const Mint = () => {
             arguments: [
               tx.object(MINT_CONFIG),
               //tx.object(item),
-              coin
+              coin,
+              tx.object(TRANSFER_POLICY),
             ],
         });
         */
@@ -170,7 +172,8 @@ const Mint = () => {
                 arguments: [
                   tx.object(MINT_CONFIG),
                   tx.object(item),
-                  coin
+                  coin,
+                  tx.object(TRANSFER_POLICY),
                 ],
               });
              });
