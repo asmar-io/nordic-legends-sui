@@ -141,7 +141,7 @@ const Mint = () => {
         console.log('Minting in progress...');
         const tx = new Transaction();
         //tx.setGasBudget(0.5*1e9);
-        /*
+       
         const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
         
         tx.moveCall({
@@ -154,7 +154,8 @@ const Mint = () => {
               tx.object(TRANSFER_POLICY),
             ],
         });
-        */
+        
+        /*
         wlnfts.map(async (nft) => { 
             const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
             const kioskTx = new KioskTransaction({
@@ -179,7 +180,7 @@ const Mint = () => {
               });
              });
              kioskTx.finalize()
-        }); 
+        });  */
 
         try {
             // execute the programmable transaction
