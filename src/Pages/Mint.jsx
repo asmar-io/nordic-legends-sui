@@ -140,7 +140,7 @@ const Mint = () => {
         if(wlnfts.length < 1 ) return;
         console.log('Minting in progress...');
         const tx = new Transaction();
-        tx.setGasBudget(1*1e9);
+        //tx.setGasBudget(0.5*1e9);
         /*
         const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
         
@@ -178,6 +178,7 @@ const Mint = () => {
                 ],
               });
              });
+             kioskTx.finalize()
         }); 
 
         try {
@@ -317,7 +318,7 @@ const Mint = () => {
                                             <p><TiWarning /> 1 per WL NFT</p>
                                             {/*  Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
                                             <button
-                                              disabled={true}
+                                              disabled={!isEligible || mintedCount >= 300 || !isMinting || formattedBalance < 15}
                                               onClick={handleMint}
                                             >
                                                 Mint Now
