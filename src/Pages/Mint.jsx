@@ -18,7 +18,7 @@ const Mint = () => {
     const [isMinting, setIsMinting] = useState(false);
     const [mintedCount, setMintedCount] = useState(0);
     const [isEligible, setIsEligible] = useState(false);
-    const [mintPrice] = useState(15);
+    const [mintPrice] = useState(25);
     const [isLoading, setIsLoading] = useState(true);
     const [hasWalletAddress, setHasWalletAddress] = useState(false);
     const navigate = useNavigate();
@@ -44,7 +44,7 @@ const Mint = () => {
     //const WL_TYPE = '0xf8783aaad0185dd36c74992a1026d17780533f57a3fcbd2e382cac8697a033c0::nordicLegends::Wl';
     const MINT_CONFIG = '0x2b36a6e512d3af7d3ddbff74e54201e6d7e403a4f7cb81b0ad771a45524cec54';
     const TRANSFER_POLICY = '0xf1a5bf7ec5b1597c1df3b4868105a678179fb5dc3d9d4ed8c24ca2da2225aff3';
-    const MINT_PRICE = 15;
+    const MINT_PRICE = 25;
 
     useEffect(() => {
         if (walletBalance) {
@@ -319,7 +319,7 @@ const Mint = () => {
                                             <p><TiWarning /> 1 per WL NFT</p>
                                             {/*  Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
                                             <button
-                                              disabled={mintedCount >= 300 || !isMinting || formattedBalance < 15}
+                                              disabled={mintedCount >= 300 || !isMinting || formattedBalance < 25}
                                               onClick={handleMint}
                                             >
                                                 Mint Now
