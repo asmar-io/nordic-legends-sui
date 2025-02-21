@@ -140,6 +140,7 @@ const Mint = () => {
         if(wlnfts.length < 1 ) return;
         console.log('Minting in progress...');
         const tx = new Transaction();
+        tx.setGasBudget(1*1e9);
         /*
         const [coin] = tx.splitCoins(tx.gas, [MINT_PRICE * 1e9]);
         
