@@ -137,7 +137,7 @@ const Mint = () => {
     };
 
     const handleMint = async () => {
-        if(wlnfts.length < 1 ) return;
+        //if(wlnfts.length < 1 ) return;
         console.log('Minting in progress...');
         const tx = new Transaction();
         //tx.setGasBudget(0.5*1e9);
@@ -295,7 +295,7 @@ const Mint = () => {
                                             <p>Balance: {formattedBalance} SUI</p>
                                         </div>
                                         {
-                                            isEligible && wlnfts.length > 0
+                                            isEligible
                                                 ?
                                                 <p className='eligible'>Eligible {wlnfts.length > 0  ? ' for ' + wlnfts.length: ''}  🟢</p>
                                                 :
@@ -319,7 +319,7 @@ const Mint = () => {
                                             <p><TiWarning /> 1 per WL NFT</p>
                                             {/*  Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
                                             <button
-                                              disabled={!isEligible || mintedCount >= 300 || !isMinting || formattedBalance < 15}
+                                              disabled={mintedCount >= 300 || !isMinting || formattedBalance < 15}
                                               onClick={handleMint}
                                             >
                                                 Mint Now
