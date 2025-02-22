@@ -272,7 +272,7 @@ const Mint = () => {
                                         }
                                         {isMinting ? (
                                             <div className='countdown-finish'>
-                                                <span>MINTING 🟢</span>
+                                                <span>MINTED OUT 🟡</span>
                                             </div>
                                         ) : (
                                             <div className='countdown'>
@@ -317,13 +317,13 @@ const Mint = () => {
                                         </div>
                                         <div className='mint-now-button'>
                                             <p><TiWarning /> 1 per WL NFT</p>
-                                            {/*  Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  */}
+                                            {/*  Mint Button works when eligibility is true, mintedCount is less than 300, and isMinting is false, wallet balance is greater than or equal to 15 SUI or if the wallet has minted one of our collection already  
                                             <button
                                               disabled={mintedCount >= 300 || !isMinting || formattedBalance < 25}
                                               onClick={handleMint}
                                             >
                                                 Mint Now
-                                            </button>
+                                            </button>*/}
                                         </div>
                                     </div>
                                 </div>
